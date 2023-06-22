@@ -13,6 +13,8 @@ public class GroupProgramming02Circle {
 
         System.out.println("c1=" +c1Area);
         System.out.println("c2=" +c2Area);
+        System.out.println(c2.toString());
+        
 
 
         /*

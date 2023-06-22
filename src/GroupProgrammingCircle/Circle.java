@@ -20,8 +20,12 @@ public class Circle {
         return area;
     }
         public double getArea() {
-        double area = Math.PI * Math.sqrt(r);
+        double area = Math.PI * Math.pow(r,r);
         return area;
+    }
+    @Override
+    public String toString(){
+        return "\n" + r +"\n"+ getArea() +"\n";
     }
 
 }
