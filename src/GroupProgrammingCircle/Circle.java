@@ -2,7 +2,7 @@ package GroupProgrammingCircle;
 public class Circle {
 
     private double r = 1;
-    private String c = "red";
+    
 
     public Circle() {
     }
