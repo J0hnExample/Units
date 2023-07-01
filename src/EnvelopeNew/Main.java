@@ -4,7 +4,7 @@ import java.util.Arrays;
 //Changelog at EOF
 public class Main {
 
-    // Envelope Parameter
+    // Envelope Parameter (with "Um-Eins-daneben-Fehler")
     public static int width = 50; // Envelope witdh
     public static int border = 1;
     public static int padding = 3; // Space between border and Text
@@ -60,14 +60,20 @@ public class Main {
 
     public static void printEnvelope(String fromName, String fromAddress, String fromZipCodeAndCity, String toName, 
                 String toAddress, String toZipCodeAndCity) {
+                    fromAddresses[0] =fromName;
+                    fromAddresses[1] =fromAddress;
+                    fromAddresses[2] =fromZipCodeAndCity;
+                    toAddresses[0] =toName;
+                    toAddresses[1] =toAddress;
+                    toAddresses[2] =toZipCodeAndCity;
     //Calculate the Space to textfield of the right side of the envelope(to Addressfield)
         int spacing = theLongestwithPadding(toAddresses);
     //Creating the Envelope line by line
         line(borderHorizontalChar, cornerChar);
         line(spaceChar, borderVerticalChar);
-        lineAddress(toAddresses, padding, spacing, "from");
+        lineAddress(fromAddresses, padding, spacing, "from");
         line(spaceChar, borderVerticalChar);
-        lineAddress(fromAddresses, padding, spacing, "to");
+        lineAddress(toAddresses, padding, spacing, "to");
         line(spaceChar, borderVerticalChar);
         line(borderHorizontalChar, cornerChar);
     }
